@@ -1,7 +1,30 @@
 .killed{
-    color:red;
+    color:#B22234;
 }
 
 .period > p{
     display: inline;
+    
+}
+
+table{
+    /* font-weight: bold; */
+    font-size: 18px
+}
+
+.dates{
+    margin:1em auto;
+}
+
+td{
+    padding:0 1em
+}
+
+h1, h2{
+    text-align: center;
+    margin: 1em 1em 0
+}
+
+#amcal{
+    color:#3C3B6E
 }

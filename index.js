@@ -293,23 +293,41 @@ const starts =
         {pres:45,date:makeDay(2020,1,20)},
 ]
 
+const current = starts[starts.length-1];
+const startOrdinal = current.date.startOf('day')
+const todayOrdinal = DateTime.fromObject({zone:'America/New_York'}).plus({days:1}).startOf('day')
+$('#presdate').text(todayOrdinal.diff(startOrdinal, 'days').toObject().days)
+
+let pres;
+let presYear
 for(let i = 0; i<starts.length;i++){
     const theStart = starts[i]
-    const startP = $('<p>').text(theStart.date.toLocaleString(DateTime.DATE_FULL))
+    const startP = theStart.date.toLocaleString(DateTime.DATE_FULL)
     let endP
+    if(theStart.pres === pres){
+        presYear++
+    }else{
+        pres = theStart.pres
+        presYear = 1
+    }
     if(i+1 !== starts.length){
         const theEnd = i + 1 === starts.length ? null : starts[i+1]
         // console.log(t);
-        endP = $('<p>').text(theEnd.date.toLocaleString(DateTime.DATE_FULL))
+        endP = $('<span>').text(theEnd.date.toLocaleString(DateTime.DATE_FULL))
         if (theStart.killed){
             endP.addClass('killed')
         }
     }else{
-        endP = null
+        endP = 'Present'
     }
 
-    const result = $('<tr>').addClass('period').append(startP).append(' to ').append(endP)
+    const thePeriod = `${startP} to ${endP}`
+
+    const result = $('<tr>').addClass('period').append($('<td>').append($('<p>').append(startP).append(' to ').append(endP))).append($('<td>').append($('<p>').text(`Presidency ${pres} Year ${presYear}`)))
     $('.dates').append(result)
+
+    // const result = $('<tr>').addClass('period').append($('<td>').append($('<p>').text(thePeriod))).append($('<td>').append($('<p>').text(`Presidency ${pres} Year ${presYear}`)))
+    // $('.dates').append(result)
 }
 
 // starts.forEach(s=>{
