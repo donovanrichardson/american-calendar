@@ -4,6 +4,8 @@ This is a conceptualization of how years might be numbered if the United States 
 
 ## Notes
 
-The twentieth amendment shifted the beginning of the presidential term from March 4th to January 20th. Though this amendment was adopted on January 23rd 1933, the first presidential inauguration to be affected by this change took place on January 20th 1937. Thus, the presidential years typically begin in March 4th in years prior to 1937, and on January 20th thereafter.
+The twentieth amendment to the United States Constitution shifted the beginning of the presidential term from March 4th to January 20th. Though this amendment was adopted on January 23rd 1933, the first presidential inauguration to be affected by this change took place on January 20th 1937. Thus, the presidential years typically begin on March 4th in years prior to 1937, and on January 20th thereafter.
+
+Though a public inauguration sometimes takes place on January 21st, the beginning of a presidential term is fixed at January 20th.
 
 Presidencies that ended in assassination are indicated in red.
