@@ -1,0 +1,7 @@
+.killed{
+    color:red;
+}
+
+.period > p{
+    display: inline;
+}
